@@ -18,7 +18,7 @@
     "messenger",
     "bot"
   ],
-  "author": "Hary Pham",
+  "author": "Toshiet Daksh",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
