@@ -4,6 +4,7 @@ import auth from "../validation/authValidation";
 import initPassportLocal from "../controllers/passport/passportLocal";
 import passport from "passport";
 import authController from "../controllers/authController";
+import userController from "../controllers/userController";
 
 //init passport-local
 initPassportLocal();
@@ -21,7 +22,7 @@ let initAllWebRoutes = (app) =>{
     router.get("/login",authController.checkLoggedOut, homepageController.getLoginPage);
     router.get("/users", authController.checkLoggedIn,  homepageController.getAdminPage);
     router.get("/all-users",authController.checkLoggedIn, homepageController.getAllUsersPage);
-
+    router.get("/create-user", userController.getCreateUserPage);
 
 
     router.post("/register", auth.validateRegister, homepageController.handleRegister);
